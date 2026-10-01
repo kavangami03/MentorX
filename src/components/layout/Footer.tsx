@@ -217,7 +217,11 @@ export function Footer() {
               </nav>
               <span className="ft__divider" aria-hidden="true" />
               <p className="ft__by">
-                by <b>SuperMIA</b> · Botfinity Inc.
+                by{' '}
+                <a href={SITE.websiteUrl} target="_blank" rel="noopener noreferrer">
+                  SuperMIA
+                </a>{' '}
+                · Botfinity Inc.
               </p>
             </div>
             <a href="#top" className="ft__top" aria-label="Back to top" data-cursor="Top">

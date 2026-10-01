@@ -3730,9 +3730,17 @@ body::after {
 .ft__by {
   color: rgb(246 233 220 / 0.7);
 }
-.ft__by b {
+.ft__by a {
   color: #fff;
   font-weight: 800;
+  background: linear-gradient(var(--terracotta), var(--terracotta)) no-repeat 0 100% / 0% 1.5px;
+  transition:
+    background-size 0.4s var(--ease),
+    color 0.3s;
+}
+.ft__by a:hover {
+  color: var(--terracotta);
+  background-size: 100% 1.5px;
 }
 .ft__top {
   position: relative;
