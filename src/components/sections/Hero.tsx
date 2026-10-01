@@ -3,7 +3,7 @@
 import { useRef } from 'react'
 import { gsap, useGSAP, SplitText, ScrollTrigger, prefersReducedMotion, animateWaves, whileVisible } from '@/lib/gsap'
 import { Img } from '@/components/ui/Img'
-import { HERO, HERO_DEMO, HERO_ROTATE } from '@/data/landing'
+import { HERO, HERO_DEMO, HERO_ROTATE, SITE } from '@/data/landing'
 
 const RING_C = 2 * Math.PI * 34
 
@@ -332,7 +332,7 @@ export function Hero({ ready }: { ready: boolean }) {
         <p className="hero2__sub">{HERO.sub}</p>
 
         <div className="hero2__ctas">
-          <a href="#cta" className="btn btn--primary btn--lg magnetic" data-cursor="Start">
+          <a href={SITE.appUrl} className="btn btn--primary btn--lg magnetic" data-cursor="Start">
             <span className="btn__label">{HERO.primaryCta}</span>
             <span className="btn__icon" aria-hidden="true">
               →

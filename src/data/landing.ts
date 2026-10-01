@@ -3,6 +3,16 @@
  * Tone: warm, plain English, second person. Product facts only: no invented user numbers, testimonials or reviews.
  */
 
+/** Company details and the links every sign-in / get-started / contact button points to */
+export const SITE = {
+  appUrl: 'https://app.mentorx.supermia.ai/',
+  email: 'hello@supermia.ai',
+  mailto: 'mailto:hello@supermia.ai',
+  website: 'supermia.ai',
+  websiteUrl: 'https://supermia.ai',
+  office: ['2451 W Grapevine Mills Cir #547', 'Grapevine, TX 76051'],
+}
+
 export const NAV_LINKS = [
   { href: '#features', label: 'Features' },
   { href: '#how', label: 'How it works' },

@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { gsap, useGSAP, ScrollTrigger, splitReveal, prefersReducedMotion, eyebrowIn } from '@/lib/gsap'
 import { Img } from '@/components/ui/Img'
-import { FAQS } from '@/data/landing'
+import { FAQS, SITE } from '@/data/landing'
 
 type Msg = { id: number; from: 'coach' | 'you'; text: string }
 
@@ -125,6 +125,19 @@ export function Faq() {
               </button>
             ))}
           </div>
+
+          <a className="faq__support" href={SITE.mailto} data-cursor="Email">
+            <span className="faq__supporticon" aria-hidden="true">
+              ✉
+            </span>
+            <span>
+              <b>Still need help? Contact support</b>
+              <span className="faq__supportmail">{SITE.email}</span>
+            </span>
+            <span className="faq__arrow" aria-hidden="true">
+              →
+            </span>
+          </a>
         </div>
 
         <div className="chat">

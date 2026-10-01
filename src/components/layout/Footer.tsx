@@ -3,7 +3,7 @@
 import { useEffect, useRef } from 'react'
 import { gsap, useGSAP, prefersReducedMotion, whileVisible } from '@/lib/gsap'
 import { Img } from '@/components/ui/Img'
-import { HERO_DEMO } from '@/data/landing'
+import { HERO_DEMO, SITE } from '@/data/landing'
 
 const COLUMNS = [
   {
@@ -20,7 +20,9 @@ const COLUMNS = [
     links: [
       { href: '#who', label: 'Who it’s for' },
       { href: '#faq', label: 'FAQ' },
-      { href: '#cta', label: 'Get started' },
+      { href: SITE.mailto, label: 'Contact us' },
+      { href: SITE.mailto, label: 'Get support' },
+      { href: SITE.appUrl, label: 'Sign in' },
     ],
   },
 ]
@@ -169,12 +171,27 @@ export function Footer() {
               </nav>
             ))}
 
+            <div className="ft__col ft__office">
+              <h4>Office</h4>
+              <address>
+                {SITE.office.map((line) => (
+                  <span key={line}>{line}</span>
+                ))}
+              </address>
+              <a href={SITE.websiteUrl} target="_blank" rel="noopener noreferrer">
+                <span>{SITE.website}</span>
+              </a>
+              <a href={SITE.mailto}>
+                <span>{SITE.email}</span>
+              </a>
+            </div>
+
             <div className="ft__q">
               <p className="ft__qlabel">
                 Your next practice question · <span className="ft__qrole">{HERO_DEMO[0].role}</span>
               </p>
               <p className="ft__qtext">“{HERO_DEMO[0].question}”</p>
-              <a href="#cta" className="btn btn--cream btn--sm magnetic" data-cursor="Answer">
+              <a href={SITE.appUrl} className="btn btn--cream btn--sm magnetic" data-cursor="Answer">
                 <span className="btn__label">Answer it now</span>
                 <span className="btn__icon" aria-hidden="true">
                   →

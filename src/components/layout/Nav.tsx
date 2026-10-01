@@ -3,7 +3,7 @@
 import { useRef, useState } from 'react'
 import Image from 'next/image'
 import { gsap, ScrollTrigger, useGSAP, prefersReducedMotion } from '@/lib/gsap'
-import { NAV_LINKS as LINKS } from '@/data/landing'
+import { NAV_LINKS as LINKS, SITE } from '@/data/landing'
 
 /** Glass pill nav: drops in after the loader, hides on scroll down, returns on scroll up */
 export function Nav({ ready }: { ready: boolean }) {
@@ -44,10 +44,10 @@ export function Nav({ ready }: { ready: boolean }) {
           ))}
         </nav>
         <div className="nav__actions">
-          <a href="#cta" className="link-quiet">
+          <a href={SITE.appUrl} className="link-quiet">
             Sign in
           </a>
-          <a href="#cta" className="btn btn--primary btn--sm magnetic" data-cursor="Go">
+          <a href={SITE.appUrl} className="btn btn--primary btn--sm magnetic" data-cursor="Go">
             <span className="btn__label">Get started</span>
             <span className="btn__icon" aria-hidden="true">
               →
@@ -71,7 +71,8 @@ export function Nav({ ready }: { ready: boolean }) {
             {l.label}
           </a>
         ))}
-        <a href="#cta" className="btn btn--primary">
+        <a href={SITE.appUrl}>Sign in</a>
+        <a href={SITE.appUrl} className="btn btn--primary">
           Get started
         </a>
       </div>

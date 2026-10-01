@@ -3,7 +3,7 @@
 import { useRef } from 'react'
 import { gsap, useGSAP, splitReveal, prefersReducedMotion } from '@/lib/gsap'
 import { Img } from '@/components/ui/Img'
-import { CTA } from '@/data/landing'
+import { CTA, SITE } from '@/data/landing'
 
 /** A forest circle grows from a dot to fill the screen, then the headline rises; small photos orbit slowly */
 export function FinalCta() {
@@ -67,7 +67,7 @@ export function FinalCta() {
           {CTA.lead} <em>{CTA.accent}</em>
         </h2>
         <p className="cta__sub">{CTA.sub}</p>
-        <a href="#top" className="btn btn--cream btn--xl magnetic" data-cursor="Let's go">
+        <a href={SITE.appUrl} className="btn btn--cream btn--xl magnetic" data-cursor="Let's go">
           <span className="btn__label">{CTA.button}</span>
           <span className="btn__icon" aria-hidden="true">
             →
